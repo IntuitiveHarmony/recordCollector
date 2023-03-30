@@ -7,6 +7,8 @@ class Record(models.Model):
     artist = models.CharField(max_length=100)
     image = models.CharField(max_length=100)
     genre = models.CharField(max_length=50)
+    # why does null work in python?
+    releaseDate = models.DateField(null=True)
     trackList = ArrayField(
         models.CharField(max_length=50)
     )

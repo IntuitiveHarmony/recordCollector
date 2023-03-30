@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Record Detail</h1>
+
+
+    
+<div class="card">
+    <div class="card-content">
+        <img class="albumCover" src="{{ record.image }}" alt="">
+        <h3 class="albumTitle">{{ record.title }}</h3>
+        <p class="albumArtist">{{ record.artist }}</p>
+
+        {{ record.trackList }}
+         
+        <p>Released: {{ record.releaseDate }}</p>
+    </div>
+</div>
+   
+
+{% endblock %}

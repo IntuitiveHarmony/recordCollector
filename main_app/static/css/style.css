@@ -1,4 +1,8 @@
 body {
+  background-image: url('https://cdn.discordapp.com/attachments/1014393155803693166/1090886312866881576/Intuitive_Harmony_vinyl_records_pilling_up_4080a5a7-54bc-44d0-930a-636af93c3c77.png');
+  background-size: 700px;
+  background-attachment: fixed;
+  background-position: 60px 80px;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
