@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Record List</h1>
+
+{% for record in records %}
+  <div class="card">
+      <div class="card-content">
+          <img class="albumCover" src="{{ record.image }}" alt="">
+          <h3 class="albumTitle">{{ record.title }}</h3>
+          <p class="albumArtist">{{ record.artist }}</p>
+      <!-- <p>Breed: {{ cat.breed }}</p>
+      <p>Description: {{ cat.description }}</p> -->
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
