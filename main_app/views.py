@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Record
+from .models import Record, Song
 
 # records = [
 #     {'title': 'Cannity', 'artist': 'Jasper Cannity', 'release_year': 1983, 'image': 'https://cdn.midjourney.com/ea3b6ac2-ec61-4b15-9623-51030613dadd/0_3.png', 'track_list': ['Singin\' to the wind', 'Mary-Belle', 'The River Knows', 'Goin\' Downtown', 'Fields of Gold', 'Can\'t go on']},
@@ -21,5 +21,12 @@ def records_index(request):
 
 def records_detail(request, record_id):
     record = Record.objects.get(id=record_id)
-    return render(request, 'records/detail.html', {'record' : record})
+    # get a list of all the songs in the record
+    # id_list = Song.record.all().values_list('id')
+    track_list = Song.objects.get(id=record_id)
+    return render(request, 'records/detail.html', {'record' : record, 'songs' : track_list})
+
+# def song_detail(request, song_id):
+#     song = Song.objects.get(id=song_id)
+#     return render
 
