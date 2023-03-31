@@ -22,3 +22,4 @@ def records_index(request):
 def records_detail(request, record_id):
     record = Record.objects.get(id=record_id)
     return render(request, 'records/detail.html', {'record' : record})
+

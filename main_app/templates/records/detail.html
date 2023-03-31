@@ -9,9 +9,8 @@
     <div class="card-content">
         <img class="albumCover" src="{{ record.image }}" alt="">
         <h3 class="albumTitle">{{ record.title }}</h3>
-        <p class="albumArtist">{{ record.artist }}</p>
-
-        {{ record.trackList }}
+        <p class="albumArtist">{{ record.band.bio }}</p>
+        
          
         <p>Released: {{ record.releaseDate }}</p>
     </div>
