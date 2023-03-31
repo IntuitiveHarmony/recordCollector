@@ -14,17 +14,34 @@ footer.page-footer {
   padding-top: 0;
   text-align: right;
 }
-.card {
-  max-width: 30em;
+
+/* Define different card sizes based on template */
+.home {
+  max-width: 10em;
 }
-.albumCover {
+.homeCover {
   width: 100%;
 }
-.albumTitle {
+.homeTitle {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.albumArtist {
+.homeBand {
+  font-size: 1.5em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.detail {
+  max-width: 30em;
+}
+.detailCover {
+  width: 100%;
+}
+.detailTitle {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.detailBand {
   font-size: 1.5em;
   margin-top: 0px;
   margin-bottom: 0px;

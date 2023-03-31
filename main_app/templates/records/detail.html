@@ -3,21 +3,20 @@
 
 <h1>Record Detail</h1>
 
-
-    
-<div class="card">
-    <div class="card-content">
-        <img class="albumCover" src="{{ record.image }}" alt="">
-        <h3 class="albumTitle">{{ record.title }}</h3>
-        <p class="albumArtist">{{ record.band.name }}</p>
-        <h4>Track List:</h4>
-        
-        <p>{{ songs }}</p>
-        
-         
-        <p>Released: {{ record.releaseDate }}</p>
+<a href="/records">
+    <div class="card detail">
+        <div class="card-content">
+            <img class="detailCover" src="{{ record.image }}" alt="">
+            <h3 class="detailTitle">{{ record.title }}</h3>
+            <p class="detailBand">{{ record.band.name }}</p>
+            <h4>Track List:</h4>
+            <p>{{ songs }}</p>
+            
+            
+            <p>Released: {{ record.releaseDate }}</p>
+        </div>
     </div>
-</div>
+</a>    
    
 
 {% endblock %}

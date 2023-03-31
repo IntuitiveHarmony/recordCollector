@@ -5,11 +5,11 @@
 
 {% for record in records %}
     <a href="/records/{{ record.id }}">
-        <div class="card">
+        <div class="card home">
             <div class="card-content">
-                <img class="albumCover" src="{{ record.image }}" alt="">
-                <h3 class="albumTitle">{{ record.title }}</h3>
-                <p class="albumArtist">{{ record.band.name }}</p>
+                <img class="detailCover" src="{{ record.image }}" alt="">
+                <h3 class="detailTitle">{{ record.title }}</h3>
+                <p class="detailBand">{{ record.band.name }}</p>
             </div>
         </div>
     </a>
