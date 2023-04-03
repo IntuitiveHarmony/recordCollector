@@ -29,6 +29,13 @@ footer.page-footer {
                0 0 90px #ff92ff, 
                0 0 100px #ff92ff;
 }
+.title {
+  padding-left: 1em;
+}
+.clear {
+  background-color: rgba(25, 25, 25, .8);
+  /* filter: blur(8px); */
+}
 /* Define different card sizes based on template */
 .home {
   padding: 0;

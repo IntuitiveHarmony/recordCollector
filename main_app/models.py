@@ -13,8 +13,18 @@ class Artist(models.Model):
     name = models.CharField(max_length=100)
     quote = models.CharField(max_length=250)
     bio = models.TextField(max_length=500)
-    instrument = models.ManyToManyField(Instrument)
+    instruments = models.ManyToManyField(Instrument)
     
+    def __str__(self):
+        return self.name
+    
+    
+class Band(models.Model):
+    name = models.CharField(max_length=100)
+    bio = models.TextField(max_length=250)
+    # Artists relationship many to many
+    artists = models.ManyToManyField(Artist)
+    # Override the __str method so the object in the ORM has a human friendly name
     def __str__(self):
         return self.name
 
@@ -24,17 +34,6 @@ class Genre(models.Model):
     # Override the __str method so the object in the ORM has a human friendly name
     def __str__(self):
         return self.name
-    
-    
-class Band(models.Model):
-    name = models.CharField(max_length=100)
-    bio = models.TextField(max_length=250)
-    artists = models.ManyToManyField(Artist)
-    # Artists relationship many to many
-    # Override the __str method so the object in the ORM has a human friendly name
-    def __str__(self):
-        return self.name
-
 
 class Record(models.Model):
     title = models.CharField(max_length=100)

@@ -3,12 +3,12 @@
 
 <h1 class="neon">Record Detail</h1>
 
-<a href="/records">
-    <div class="card detail">
-        <div class="card-content">
+<div class="card detail">
+  <div class="card-content">
+    <a href="/records">< Back</a>    
             <img class="detailCover" src="{{ record.image }}" alt="">
             <h3 class="detailTitle">{{ record.title }}</h3>
-            <p class="detailBand">{{ record.band.name }}</p>
+            <a href="/bands/{{ record.band.id }}"><p class="detailBand">{{ record.band.name }}</p></a>
             <p>Genres: 
                 {% if genres %}
                 <p>
@@ -29,7 +29,6 @@
             
         </div>
     </div>
-</a>    
    
 
 {% endblock %}

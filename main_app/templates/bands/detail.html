@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 class="neon">Band Detail</h1>
+<div class="card detail">
+    <div class="card-content">
+      <!-- <a href="/records">< Back</a>     -->
+        <h3 class="detailTitle">{{ band.name }}</h3>
+        <p>{{ band.bio }}</p>
+        {% for artist in band.artists.all %}
+        <p>{{artist.name}} - {% for instrument in artist.instruments.all %} {{ instrument.name }}{% if not forloop.last %}, {% endif %} {% endfor %} </p>
+        {% endfor %}
+        
+              
+              
+    </div>
+</div>
+   
+
+{% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Record
+from .models import Record, Band, Instrument, Artist
 
 # records = [
 #     {'title': 'Cannity', 'artist': 'Jasper Cannity', 'release_year': 1983, 'image': 'https://cdn.midjourney.com/ea3b6ac2-ec61-4b15-9623-51030613dadd/0_3.png', 'track_list': ['Singin\' to the wind', 'Mary-Belle', 'The River Knows', 'Goin\' Downtown', 'Fields of Gold', 'Can\'t go on']},
@@ -27,7 +27,17 @@ def records_detail(request, record_id):
     genres = record.genre.all()
     print(genres)
     # render the record detail page and pass the record and songs in as context
-    return render(request, 'records/detail.html', {'record' : record, 'songs' : songs, 'genres': genres})
+    return render(request, 'records/detail.html', {
+        'record' : record, 
+        'songs' : songs, 
+        'genres': genres
+    })
+
+def bands_detail(request, band_id):
+    band = Band.objects.get(id=band_id)
+    return render(request, 'bands/detail.html', {
+        'band' : band,
+    })
 
 # def song_detail(request, song_id):
 #     song = Song.objects.get(id=song_id)
