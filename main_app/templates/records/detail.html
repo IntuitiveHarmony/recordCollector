@@ -9,13 +9,24 @@
             <img class="detailCover" src="{{ record.image }}" alt="">
             <h3 class="detailTitle">{{ record.title }}</h3>
             <p class="detailBand">{{ record.band.name }}</p>
+            <p>Genres: 
+                {% if genres %}
+                <p>
+                {% for genre in genres %}
+                <!-- This need to be on the same line so there is no space between the word and comma -->
+                  {{ genre.name }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+                </p>
+              {% else %}
+                <p>No genres found for this record.</p>
+              {% endif %}
             <h4 class="detailTrackHeader">Track List:</h4>
             {% for song in songs %}
-            <p>{{ song.trackNumber }} - {{ song.title }} - {{ song.length }}</p>
+                <p>{{ song.trackNumber }} - {{ song.title }} - {{ song.length }}</p>
             {% endfor %}
             
+            <p>Released: {{ record.releaseDate }}</p>
             
-            <p >Released: {{ record.releaseDate }}</p>
         </div>
     </div>
 </a>    

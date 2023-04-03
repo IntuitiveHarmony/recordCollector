@@ -3,6 +3,12 @@ from django.db import models
 
 # Create your models here.
 
+class Genre(models.Model):
+    name = models.CharField(max_length=50)
+    # Override the __str method so the object in the ORM has a human friendly name
+    def __str__(self):
+        return self.name
+    
 class Band(models.Model):
     name = models.CharField(max_length=100)
     bio = models.TextField(max_length=250)
@@ -15,7 +21,7 @@ class Record(models.Model):
     title = models.CharField(max_length=100)
     band = models.ForeignKey(Band, on_delete=models.CASCADE)
     image = models.CharField(max_length=100)
-    genre = models.CharField(max_length=50)
+    genre = models.ManyToManyField(Genre)
     # why does null work in python?
     releaseDate = models.DateField(null=True)
     # Override the __str method so the object in the ORM has a human friendly name

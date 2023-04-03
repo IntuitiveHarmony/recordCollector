@@ -31,17 +31,19 @@ footer.page-footer {
 }
 /* Define different card sizes based on template */
 .home {
-  max-width: 10em;
+  padding: 0;
+  max-width: 15em;
 }
 .homeCover {
   width: 100%;
 }
 .homeTitle {
+  font-size: 1.5em;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 .homeBand {
-  font-size: 1.5em;
+  font-size: 1em;
   margin-top: 0px;
   margin-bottom: 0px;
 }
