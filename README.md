@@ -18,6 +18,14 @@ I hope you have has much fun looking through Record Collector as I had creating 
 
 <br/>
 
+##  🌐 Data Mapping
+
+Perhaps one of the most confusing aspects of working with databases for me is relating tables.  I get what is happening on a core level (basicly) and I also know how powerful relating tables can be for a developer.  I utelized a couple of 1:M relationships as well as a few M:M relatinships.  To help myself out with making sense of all the data entities I was trying to implement.  Here is a picture of my ERD:
+
+<img src="./main_app/static/images/dataMap.png" width="700em" alt="Data Map"/>
+
+<br/>
+
 ## ✨ Favicon
 
 I used Midjourney to make the Favicon as well, in fact I will usually make cusom favicons for web aplications I build.  I don't know what it is exactly about small icons, but I ❤️ them, a lot.  I mainly wanted to talk about icons so I could share this screen shot of me taking a set of icons Midjourney generated for me and getting ready to crop the icon I wanted.  There was something so satisfying about the crop selector tool bordering each icon so perfectly when I first pulled it up.  
