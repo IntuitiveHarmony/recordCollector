@@ -2,6 +2,22 @@ from django.contrib.postgres.fields import ArrayField
 from django.db import models
 
 # Create your models here.
+class Instrument(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
+class Artist(models.Model):
+    name = models.CharField(max_length=100)
+    quote = models.CharField(max_length=250)
+    bio = models.TextField(max_length=500)
+    instrument = models.ManyToManyField(Instrument)
+    
+    def __str__(self):
+        return self.name
+
 
 class Genre(models.Model):
     name = models.CharField(max_length=50)
@@ -9,13 +25,16 @@ class Genre(models.Model):
     def __str__(self):
         return self.name
     
+    
 class Band(models.Model):
     name = models.CharField(max_length=100)
     bio = models.TextField(max_length=250)
+    artists = models.ManyToManyField(Artist)
     # Artists relationship many to many
     # Override the __str method so the object in the ORM has a human friendly name
     def __str__(self):
         return self.name
+
 
 class Record(models.Model):
     title = models.CharField(max_length=100)
@@ -27,6 +46,7 @@ class Record(models.Model):
     # Override the __str method so the object in the ORM has a human friendly name
     def __str__(self):
         return self.title
+    
     
 class Song(models.Model):
     trackNumber = models.PositiveIntegerField()

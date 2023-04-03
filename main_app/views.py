@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Record, Song, Genre 
+from .models import Record
 
 # records = [
 #     {'title': 'Cannity', 'artist': 'Jasper Cannity', 'release_year': 1983, 'image': 'https://cdn.midjourney.com/ea3b6ac2-ec61-4b15-9623-51030613dadd/0_3.png', 'track_list': ['Singin\' to the wind', 'Mary-Belle', 'The River Knows', 'Goin\' Downtown', 'Fields of Gold', 'Can\'t go on']},
