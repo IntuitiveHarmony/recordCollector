@@ -21,10 +21,10 @@ def records_index(request):
 
 def records_detail(request, record_id):
     record = Record.objects.get(id=record_id)
-    # get a list of all the songs in the record
-    # id_list = Song.record.all().values_list('id')
-    track_list = Song.objects.get(id=record_id)
-    return render(request, 'records/detail.html', {'record' : record, 'songs' : track_list})
+    # get a list of all the songs in the record and sort by the track number
+    songs = record.song_set.all().order_by('trackNumber')
+    # render the record detail page and pass the record and songs in as context
+    return render(request, 'records/detail.html', {'record' : record, 'songs' : songs})
 
 # def song_detail(request, song_id):
 #     song = Song.objects.get(id=song_id)

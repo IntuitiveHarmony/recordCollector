@@ -9,11 +9,13 @@
             <img class="detailCover" src="{{ record.image }}" alt="">
             <h3 class="detailTitle">{{ record.title }}</h3>
             <p class="detailBand">{{ record.band.name }}</p>
-            <h4>Track List:</h4>
-            <p>{{ songs }}</p>
+            <h4 class="detailTrackHeader">Track List:</h4>
+            {% for song in songs %}
+            <p>{{ song.trackNumber }} - {{ song.title }} - {{ song.length }}</p>
+            {% endfor %}
             
             
-            <p>Released: {{ record.releaseDate }}</p>
+            <p >Released: {{ record.releaseDate }}</p>
         </div>
     </div>
 </a>    

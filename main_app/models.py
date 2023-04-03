@@ -7,7 +7,7 @@ class Band(models.Model):
     name = models.CharField(max_length=100)
     bio = models.TextField(max_length=250)
     # Artists relationship many to many
-    # so the object in the ORM has a human friendly name
+    # Override the __str method so the object in the ORM has a human friendly name
     def __str__(self):
         return self.name
 
@@ -18,7 +18,7 @@ class Record(models.Model):
     genre = models.CharField(max_length=50)
     # why does null work in python?
     releaseDate = models.DateField(null=True)
-    # so the object in the ORM has a human friendly name
+    # Override the __str method so the object in the ORM has a human friendly name
     def __str__(self):
         return self.title
     
@@ -27,6 +27,6 @@ class Song(models.Model):
     title = models.CharField(max_length=100)
     length = models.DurationField()
     record = models.ForeignKey(Record, on_delete=models.CASCADE)
-    # so the object in the ORM has a human friendly name
+    # Override the __str method so the object in the ORM has a human friendly name
     def __str__(self):
         return self.title
