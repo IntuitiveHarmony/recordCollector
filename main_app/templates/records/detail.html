@@ -6,29 +6,27 @@
 <div class="card detail">
   <div class="card-content">
     <a href="/records">< Back</a>    
-            <img class="detailCover" src="{{ record.image }}" alt="">
-            <h3 class="detailTitle">{{ record.title }}</h3>
-            <a href="/bands/{{ record.band.id }}"><p class="detailBand">{{ record.band.name }}</p></a>
-            <p>Genres: 
-                {% if genres %}
-                <p>
-                {% for genre in genres %}
-                <!-- This need to be on the same line so there is no space between the word and comma -->
-                  {{ genre.name }}{% if not forloop.last %}, {% endif %}
-                {% endfor %}
-                </p>
-              {% else %}
-                <p>No genres found for this record.</p>
-              {% endif %}
-            <h4 class="detailTrackHeader">Track List:</h4>
-            {% for song in songs %}
-                <p>{{ song.trackNumber }} - {{ song.title }} - {{ song.length }}</p>
-            {% endfor %}
-            
-            <p>Released: {{ record.releaseDate }}</p>
-            
-        </div>
-    </div>
+    <img class="detailCover" src="{{ record.image }}" alt="">
+    <h3 class="detailTitle">{{ record.title }}</h3>
+    <a href="/bands/{{ record.band.id }}"><p class="detailBand">{{ record.band.name }}</p></a>
+    <p>Genres: 
+        {% if genres %}
+          <p>
+        {% for genre in genres %}
+        <!-- This need to be on the same line so there is no space between the word and comma -->
+          {{ genre.name }}{% if not forloop.last %}, {% endif %}
+        {% endfor %} 
+        </p>
+      {% else %}
+        <p>No genres found for this record.</p>
+      {% endif %}
+    <h4 class="detailTrackHeader">Track List:</h4>
+    {% for song in songs %}
+        <p>{{ song.trackNumber }} - {{ song.title }} - {{ song.length }}</p>
+    {% endfor %}        
+    <p>Released: {{ record.releaseDate }}</p>         
+  </div>
+</div>
    
 
 {% endblock %}

@@ -4,6 +4,7 @@ from django.db import models
 # Create your models here.
 class Instrument(models.Model):
     name = models.CharField(max_length=100)
+    order = models.IntegerField()
 
     def __str__(self):
         return self.name
@@ -34,6 +35,7 @@ class Genre(models.Model):
     # Override the __str method so the object in the ORM has a human friendly name
     def __str__(self):
         return self.name
+
 
 class Record(models.Model):
     title = models.CharField(max_length=100)

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&_qm^aq7*a#3ndr&0v6!bggo^v5#1)&33gmi=+7*()oe$^$)(z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['recordcollector.fly.dev', 'localhost']
 
 
 # Application definition

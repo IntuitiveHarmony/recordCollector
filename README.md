@@ -20,7 +20,7 @@ I hope you have has much fun looking through Record Collector as I had creating 
 
 ## 🌐 Data Mapping
 
-Perhaps one of the most confusing aspects of working with databases for me is relating tables.  I get what is happening on a core level (basicly) and I also know how powerful relating tables can be for a developer.  I utelized a couple of 1:M relationships as well as a few M:M relatinships.  To help myself out with making sense of all the data entities I was trying to implement.  Here is a picture of my ERD:
+Perhaps one of the most confusing aspects of working with databases for me is relating tables.  I get what is happening on a core level (basicly) and I also know how powerful relating tables can be for a developer.  I utelized a couple of 1:M relationships as well as a few M:M relatinships.  To help myself out with making sense of all the data entities I was trying to implement I drew myself a diagram of each of the data entities and the relationships between them. This is also know as an ERD (Entity Data Relationship). Here is a picture of my ERD, which I referenced constanlty while building Record Collector:
 
 <img src="./main_app/static/images/dataMap.png" width="700em" alt="Data Map"/>
 

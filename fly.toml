@@ -1,0 +1,4 @@
+# fly.toml file generated for recordcollector on 2023-04-19T21:26:06-06:00
+
+app = "recordcollector"
+primary_region = "dfw"
