@@ -1,1 +1,1 @@
-web: gunicorn record-collector.wsgi
+web: gunicorn recordCollector.wsgi
