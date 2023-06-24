@@ -1,6 +1,10 @@
 # <img src="./main_app/static/images/favicon.png" width="24em"/> Record Collector
 
-This is a django project that utilizes a Postgres database.
+🚧 THIS PROJECT IS A WORK IN PROGRESS 🚧
+
+This is a django project that utilizes a Postgres database and is deployed on Heroku.
+
+Visit the [live site](https://record-collector-bc7b9f813a11.herokuapp.com/) 
 
 <br/>
 
@@ -75,3 +79,4 @@ All of the SQL was sent to the database just so I could render this simple detai
 
 <br/>
 
+🚧 THIS PROJECT IS A WORK IN PROGRESS 🚧
